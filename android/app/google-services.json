@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1978886365",
+    "project_id": "simple-chat-6fff4",
+    "storage_bucket": "simple-chat-6fff4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1978886365:android:a22556993522dceca39334",
+        "android_client_info": {
+          "package_name": "com.taouti.simplechat.simple_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1978886365-fl1fo175olbhtaldh2vr3kikc1fh934g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-XyL76wHs-fdsO5wzRkvwFkeazRMA1H4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1978886365-fl1fo175olbhtaldh2vr3kikc1fh934g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,6 +17,7 @@ const kMessageContainerDecoration = BoxDecoration(
     top: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
   ),
 );
+
 const KTextFieldDecoration = InputDecoration(
   hintText: '*',
   //hintStyle: TextStyle(color: Colors.blueGrey),
