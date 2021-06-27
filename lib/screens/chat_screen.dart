@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final _firestore = FirebaseFirestore.instance;
+late User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
   static const String id = "chat_screen";
@@ -15,7 +16,7 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   final _auth = FirebaseAuth.instance;
   final messageTextController = TextEditingController();
-  late User loggedInUser;
+
   String messageText = '';
 
   @override
@@ -43,13 +44,13 @@ class _ChatScreenState extends State<ChatScreen> {
   //   }
   // }
 
-  void messagesStream() async {
-    await for (var snapshot in _firestore.collection('messages').snapshots()) {
-      for (var message in snapshot.docs) {
-        print(message.data());
-      }
-    }
-  }
+  //void messagesStream() async {
+  //  await for (var snapshot in _firestore.collection('messages').snapshots()) {
+  //    for (var message in snapshot.docs) {
+  //      print(message.data());
+  //    }
+  //  }
+  //}
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +73,10 @@ class _ChatScreenState extends State<ChatScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            MessagesStrem(firestore: _firestore),
+            MessagesStrem(
+              firestore: _firestore,
+              currentUser: loggedInUser.email,
+            ),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
